@@ -1,25 +1,23 @@
-<h1>
-    Login
-</h1>
-
-<p>
-    <label>Email/Username</label>
-    <br>
-    <input [(ngModel)]="email">
-</p>
-
-<app-password [seePassword]="false" [breakLineOnInput]="true" />
-
-<p>
-    <button>Logar</button>
-</p>
-
-<p>
-    Não possui conta? <a routerLink="newaccount">Crie uma agora mesmo!</a>
-</p>
-
-<p>
-    Esqueceu sua senha? <a href="{{'/recover/' + email}}">Recupere agora!</a>
-</p>
-
-<router-outlet></router-outlet>
+<mat-card>
+    <mat-card-content class="card">
+        <h1 class="titulo">
+            Login
+        </h1>
+        <p>
+            <label>Email/Username</label>
+            <br>
+            <input [(ngModel)]="email">
+        </p>
+        <app-password [seePassword]="false" [breakLineOnInput]="true" (valueChanged)="passwordChanged($event)" />
+        <p>
+            <button mat-button color="primary" (click)="login()">Logar</button>
+        </p>
+        <p>
+            Não possui conta? <a routerLink="newaccount">Crie uma agora mesmo!</a>
+        </p>
+        <p>
+            Esqueceu sua senha? <a href="{{'/recover/' + email}}">Recupere agora!</a>
+        </p>
+        <router-outlet></router-outlet>
+    </mat-card-content>
+</mat-card>

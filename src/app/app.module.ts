@@ -16,6 +16,12 @@ import { PasswordComponent } from './password/password.component';
 import { FormsModule } from '@angular/forms';
 import { CreatePasswordComponent } from './create-password/create-password.component';
 import { CpfValidatorComponent } from './cpf-validator/cpf-validator.component'; // Adicionado para poder usar o ngModel
+import { HttpClientModule } from '@angular/common/http'; // Added for use HttpClient
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Added for use ReactiveForms
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button'; // Added for use Angular Material Button
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations:
@@ -38,7 +44,13 @@ import { CpfValidatorComponent } from './cpf-validator/cpf-validator.component';
   [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Adicionado para poder usar o ngModel
+    FormsModule, // Adicionado para poder usar o ngModel
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: 
   [
